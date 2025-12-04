@@ -1,0 +1,119 @@
+Student Management System API (Python + Flask)
+
+This project is a RESTful API built using Python and the Flask framework. It allows users to manage student records using standard CRUD operations. The backend interacts with a MySQL database and follows a modular, scalable structure that is suitable for backend developer internships and production-ready API development.
+
+------------------------------------------
+FEATURES
+------------------------------------------
+- Add new student records
+- Update existing student information
+- Delete a student record
+- Fetch all student records
+- MySQL database integration
+- Modular project structure using Flask Blueprints
+- API tested using Postman
+- Easily extendable backend design
+
+------------------------------------------
+TECH STACK
+------------------------------------------
+Language: Python
+Framework: Flask
+Database: MySQL
+Tools: Postman, Git
+Data Format: JSON
+Packages: mysql-connector-python, Flask, PyJWT (optional)
+
+------------------------------------------
+FOLDER STRUCTURE
+------------------------------------------
+Student-Management-API/
+│-- app.py
+│-- database.py
+│-- requirements.txt
+│-- README.md
+│-- models/
+│     └── student.py
+│-- routes/
+│     └── student_routes.py
+└── utils/
+      └── auth.py (optional)
+
+------------------------------------------
+INSTALLATION AND SETUP
+------------------------------------------
+
+1. Clone the repository:
+git clone https://github.com/YourUsername/Student-Management-API.git
+cd Student-Management-API
+
+2. Install required packages:
+pip install -r requirements.txt
+
+3. Create the MySQL database:
+Open MySQL and run:
+CREATE DATABASE student_db;
+
+4. Run the application:
+python app.py
+
+The API will start on:
+http://127.0.0.1:5000/
+
+------------------------------------------
+API ENDPOINTS
+------------------------------------------
+
+1. ADD STUDENT
+Method: POST
+Endpoint: /students/add
+Request Body:
+{
+  "name": "Nani",
+  "department": "CSE",
+  "email": "nani@example.com",
+  "age": 21
+}
+
+2. GET ALL STUDENTS
+Method: GET
+Endpoint: /students/all
+
+3. UPDATE STUDENT
+Method: PUT
+Endpoint: /students/update/<id>
+Request Body:
+{
+  "name": "New Name",
+  "department": "CSE",
+  "email": "new@example.com",
+  "age": 22
+}
+
+4. DELETE STUDENT
+Method: DELETE
+Endpoint: /students/delete/<id>
+
+------------------------------------------
+TESTING USING POSTMAN
+------------------------------------------
+Use Postman to send requests to:
+POST /students/add
+GET /students/all
+PUT /students/update/<id>
+DELETE /students/delete/<id>
+
+------------------------------------------
+FUTURE ENHANCEMENTS
+------------------------------------------
+- JWT authentication for secure API usage
+- Attendance management module
+- Course and department modules
+- Pagination and search filters
+- Role-based access control
+
+------------------------------------------
+AUTHOR
+------------------------------------------
+Nani Garnipudi
+GitHub: https://github.com/GarnipudiNani
